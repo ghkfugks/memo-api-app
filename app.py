@@ -26,8 +26,10 @@ api = Api(app)
 api.add_resource(UserRegisterResource, '/users/register')
 api.add_resource(UserLoginResource, '/users/login')
 api.add_resource(UserLogoutResource, '/users/logout')
-api.add_resource
-api.add_resource
+api.add_resource(memoListResource, '/memo')
+api.add_resource(memoResource, '/memo/<int:memo_id>')
+api.add_resource(FollowResource, '/follow/<int:follow_id>')
+api.add_resource(FollowListResource, '/follow')
 
 if __name__ == '__main__' :
     app.run()
