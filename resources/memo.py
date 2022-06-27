@@ -30,7 +30,7 @@ class MemoListResource(Resource) :
             connection = get_connection()
 
             # 2. 쿼리문 만들기
-            query = '''insert into memo
+            query = ''' into memo
                     (title, date, content, user_id)
                     values
                     (%s , %s , %s, %s);'''
