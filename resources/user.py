@@ -47,12 +47,12 @@ class UserRegisterResource(Resource) :
 
             # 2. 쿼리문 만들기
             query = '''insert into user
-                    (email, password, nickname)
+                    (email, password, name)
                     values
                     (%s, %s , %s);'''
             
             record = (data['email'], hashed_password, 
-                        data['nickname'] )
+                        data['name'] )
 
             # 3. 커서를 가져온다.
             cursor = connection.cursor()
